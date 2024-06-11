@@ -1,0 +1,19 @@
+#version: "3.8"
+
+services:
+    node:
+        build:
+            context: .
+            dockerfile: Dockerfile.node
+        container_name: build
+        environment:
+            - NODE_ENV=prod
+        volumes:
+            - ./build:/usr/src/app/build
+            - ./django_prosemirror:/usr/src/app/django_prosemirror
+            - node_modules:/usr/src/app/build/node_modules
+        ports:
+            - "3000:3000"
+
+volumes:
+    node_modules:
