@@ -1,0 +1,10 @@
+FROM node:20.14.0-alpine
+
+RUN mkdir -p /usr/src/app
+
+COPY build /usr/src/app/build
+COPY django_prosemirror /usr/src/app/django_prosemirror
+
+WORKDIR /usr/src/app/build
+
+RUN npm install

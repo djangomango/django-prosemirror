@@ -1,0 +1,13 @@
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+.idea/
+venv/
+.venv/
+build/node_modules/
+
+# Local developer tools and private runners
+local/
+scripts/local/

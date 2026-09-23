@@ -1,0 +1,3 @@
+recursive-include django_prosemirror/static *.js
+recursive-include django_prosemirror/static *.css
+recursive-include django_prosemirror/templates *.html
